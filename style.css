@@ -1,0 +1,63 @@
+/* 
+Theme Name: Loosli Red Angus
+Theme URI: http://cyberchimps.com/guide/child-theme-example/
+Description: Responsive Child Theme
+Template: responsive
+Version: 1.0.0
+Author: Jared Loosli
+Author URI: http://avantidevelopment.com
+License: GNU General Public License
+License URI: license.txt
+
+*/
+
+/* =Start From Here
+-------------------------------------------------------------- */
+
+
+#lot_video {
+    float: left;
+    width: 90%;
+}
+
+#lot_list {
+    float: left;
+    width: 10%;
+}
+
+.video_player_wrapper {
+    height: 100%;
+    width: 100%;
+}
+
+#lot_list .lot_link_wrapper {
+    display: block;
+    text-align: center;
+}
+
+/* Style list pages to look like buttons */
+ul.list-pages-shortcode.buttons {
+    list-style-type: none;
+}
+
+.list-pages-shortcode.buttons li.page_item {
+    float: left;
+    padding-right: 2em;
+    display: inline-block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*The last 29 days of the month are the hardest."- Nikola Tesla*/
