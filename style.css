@@ -3,7 +3,7 @@ Theme Name: Loosli Red Angus
 Theme URI: http://cyberchimps.com/guide/child-theme-example/
 Description: Responsive Child Theme
 Template: responsive
-Version: 1.0.0
+Version: 1.0.2
 Author: Jared Loosli
 Author URI: http://avantidevelopment.com
 License: GNU General Public License
@@ -14,15 +14,44 @@ License URI: license.txt
 /* =Start From Here
 -------------------------------------------------------------- */
 
-
-#lot_video {
-    float: left;
-    width: 90%;
+.direction-controls-placeholder .dir-input .wp { height: initial !important;}
+button.kd-button {
+    background-image: initial !important;
+    text-shadow: initial !important;
 }
 
-#lot_list {
-    float: left;
-    width: 10%;
+.adp-step, .adp-text {
+    width: initial !important;
+}
+.top-widget > div {
+    float: right;
+    margin: 0 10px;
+}
+@media only screen and (max-width: 650px) {
+    .top-widget > div {
+        float: initial;
+    }
+}
+
+#logo {margin-top: 30px;}
+
+
+#wrapper, #featured, #wrapper .widget-wrapper {
+    background-color: rgba(255,255,255,0.5);
+}
+
+body.custom-background {
+    background-size: cover;
+}
+
+.clear:before,
+.clear:after {
+    content: " ";
+    display: table;
+}
+
+.clear:after {
+    clear: both;
 }
 
 .video_player_wrapper {
@@ -31,8 +60,9 @@ License URI: license.txt
 }
 
 #lot_list .lot_link_wrapper {
-    display: block;
-    text-align: center;
+    display: inline-block;
+    width: 2rem;
+    margin-right: 0.7rem;
 }
 
 /* Style list pages to look like buttons */

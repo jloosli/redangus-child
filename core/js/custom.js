@@ -25,7 +25,7 @@
     }
 
     function setOrder(lot_numbers) {
-        for (i = lot_numbers.length; i >= 0; i--)
+        for (var i = lot_numbers.length; i >= 0; i--)
             setToTop(lot_numbers[i]);
 
         $('.lot_link[data-available=1]').first().trigger('click');
@@ -39,6 +39,7 @@
         $('#lot_list').on('click', '.lot_link', function (e) {
             e.preventDefault();
             playVideo($(this).data('videoUrl'), $(this).data('videoType'), $(this).data('lotId'), $(this).data('imageUrl'));
+            $('html, body').animate({ scrollTop: $('#lot_video').offset().top }, 'ease');
             return false;
         });
 
@@ -48,5 +49,13 @@
 
         var list_pages = $('.list-pages-shortcode.buttons');
         list_pages.find('a').addClass('button brown');
-    })
+    });
+
+    if(/dev$/.test(window.location.hostname)) {
+        $('img').each(function(){
+            if(/^\\|http:\/\/loosliredangus\.dev/.test(this.src)){
+                this.src=this.src.replace('.dev','.com');
+            }
+        })
+    }
 })(jQuery);
