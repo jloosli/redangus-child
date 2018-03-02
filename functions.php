@@ -1,5 +1,5 @@
 <?php
-define('ANGUS_VER', '1.1');
+define('ANGUS_VER', '1.5.10');
 // Theme seems to add this in automatically. Change version via style.css version information
 
 //add_action( 'wp_enqueue_scripts', 'theme_enqueue_styles' );

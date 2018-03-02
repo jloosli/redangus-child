@@ -3,7 +3,7 @@ Theme Name: Loosli Red Angus
 Theme URI: https://github.com/cyberchimps/responsive-childtheme/tree/responsive-II
 Description: Responsive II Child Theme
 Template: responsive-mobile
-Version: 1.0.3
+Version: 1.0.8
 Author: Jared Loosli
 Author URI: http://avantidevelopment.com
 License: GNU General Public License
@@ -13,6 +13,12 @@ License URI: license.txt
 
 /* =Start From Here
 -------------------------------------------------------------- */
+* {
+    box-sizing: border-box;
+}
+#container {
+    max-width: 1200px;
+}
 
 .direction-controls-placeholder .dir-input .wp { height: initial !important;}
 button.kd-button {
@@ -65,6 +71,12 @@ body.custom-background {
     margin-right: 0.7rem;
 }
 
+/* Enlarge links for main sale */
+.list-pages-shortcode.main-sale li {
+    font-size: 1.2rem;
+}
+
+
 /* Style list pages to look like buttons */
 ul.list-pages-shortcode.buttons {
     list-style-type: none;
@@ -76,12 +88,59 @@ ul.list-pages-shortcode.buttons {
     display: inline-block;
 }
 
+/* Youtube Video Playlist (from 2018 onward) */
+
+#ytWrapper {
+    display: flex;
+    flex-flow: row;
+}
+
+@media (max-width: 700px) {
+    #ytWrapper {
+        flex-flow: column;
+    }
+}
+
+#ytLotList {
+    display: flex;
+    flex-flow: row wrap;
+    flex: 1;
+}
+
+#ytVideoPlayer {
+    flex: 3;
+}
+
+#ytLotList > div.active, #ytLotList > div:hover {
+    font-weight: 900;
+    border-color: rgba(0,0,0,0.2);
+}
+
+#ytLotList > div {
+    text-align: center;
+    min-width: 2rem;
+    min-height: 1.5rem;
+    padding: 0.2rem;
+    border: 1px solid transparent;
+    cursor: pointer;
+}
+
+/* Herd Bulls Page (id 10) */
+
+#post-10 .post-entry {
+    display: flex;
+    justify-content: space-around;
+    flex-flow: row wrap;
+}
 
 
 
+/* Misc */
 
-
-
+/* From https://github.com/Automattic/jetpack/issues/7148 */
+.share-icon {
+    text-rendering: auto;
+}
 
 
 
